@@ -141,6 +141,14 @@ body {
   position: relative;
 }
 
+.completed {
+  opacity: 0.5 !important;
+}
+
+.crossedLine {
+  text-decoration: line-through;
+}
+
 .listTodoItem--textBox {
   padding: 0rem 1rem;
 }

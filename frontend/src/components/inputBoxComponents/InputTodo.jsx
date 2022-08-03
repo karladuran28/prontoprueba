@@ -1,13 +1,19 @@
+import { postMethod } from "../../helpers";
 import { useForm } from "../../hooks";
 
-export const InputTodo = () => {
+export const InputTodo = ({loadTodoList}) => {
 
   const {nuevoTodo, onInputChange, onResetForm} = useForm({nuevoTodo: ""})
+
+  const addTodo = () => {
+    const data = {descripcion: nuevoTodo};
+    postMethod(data, loadTodoList);
+  }
 
   const onAddSubmit = (e) => {
     e.preventDefault();
     if(nuevoTodo.trim().length > 0) {
-      console.log(nuevoTodo);
+      addTodo();
       onResetForm();
     }
   }

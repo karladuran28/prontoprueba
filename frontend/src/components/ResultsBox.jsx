@@ -1,24 +1,23 @@
-import { useState } from "react"
 import { ListTodoItem } from "./resultsBoxComponents"
 
-export const ResultsBox = () => {
-
-  const [listTodos, setlistTodos] = useState(["Learn React", "Learn React Native", "Start with Hooks"])
-
-  const removeTodo = (todo) => {
-    setlistTodos(prev => prev.filter(t => t !== todo))
-  }
+export const ResultsBox = ({todoList, filterUser, loadTodoList}) => {
 
   return (
     <div className="resultsBox">
       <div className="resultsBox--list">
+        { filterUser === "Todos" &&
+          todoList.map(todo => 
+            <ListTodoItem todo={todo} key={todo.id} loadTodoList={loadTodoList}/>)
+        }
         {
-          listTodos.map(todo => 
-            <ListTodoItem 
-              todoText={todo} 
-              key={todo}
-              removeTodo={removeTodo}
-            />)
+          filterUser === "Completados" &&
+          todoList.map(todo => todo.isCompleted &&
+            <ListTodoItem todo={todo} key={todo.id} loadTodoList={loadTodoList}/>)
+        }
+        {
+          filterUser === "Por hacer" &&
+          todoList.map(todo => !todo.isCompleted &&
+            <ListTodoItem todo={todo} key={todo.id} loadTodoList={loadTodoList}/>)
         }
       </div>
     </div>

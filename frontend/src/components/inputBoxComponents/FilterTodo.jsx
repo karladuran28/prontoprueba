@@ -1,11 +1,11 @@
 
-export const FilterTodo = () => {
+export const FilterTodo = ({setFilterUser}) => {
 
   const filtros = ["Todos", "Completados", "Por hacer"];
 
   const onInputChange = ({target}) => {
     const selectedFilter = target.options[target.selectedIndex].value;
-    console.log(selectedFilter);
+    setFilterUser(selectedFilter);
   }
 
   return (
