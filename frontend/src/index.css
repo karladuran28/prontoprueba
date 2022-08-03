@@ -182,3 +182,29 @@ body {
 .icon-sm {
   font-size: 1rem;
 }
+
+
+/* media queries */
+
+@media only screen and (max-width: 1000px) {
+  .resultsBox--list {
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .resultsBox--list {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 650px) {
+  .inputBox {
+    flex-direction: column;
+    padding: 2rem 0rem;
+  }
+
+  .inputBox--inputTodo, .inputBox--filterTodo {
+    min-height: 2.5rem;
+    width: 100%;
+  }
+}
