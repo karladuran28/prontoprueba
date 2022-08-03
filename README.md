@@ -21,4 +21,4 @@ Framework Django
 Instala dependencias del back end.
 #### `python3 manage.py runserver`
 
-Ejecuta el servidor del back end [http://localhost:8000]
+Ejecuta el servidor [http://localhost:8000/api/todos]
