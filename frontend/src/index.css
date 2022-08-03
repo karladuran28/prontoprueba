@@ -5,9 +5,172 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: radial-gradient(#1F314A, #141F31);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.content {
+  padding: 5rem;
+  position: relative;
+}
+
+.app-heading {
+  color: white;
+  display: flex;
+  font-size: 3rem;
+  font-weight: bold;
+  justify-content: center;
+  position: relative;
+}
+
+.inputBox {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  height: 2.5rem;
+  justify-content: center;
+  margin-top: 3rem;
+  padding: 2rem;
+  position: relative;
+}
+
+.inputBox--inputTodo {
+  background-color: white;
+  height: 100%;
+  position: relative;
+  width: 20rem;
+}
+
+.inputBox--inputTodo--form {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  height: 100%;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+}
+
+.form--inputTodo--input {
+  border: none;
+  font-size: 1rem;
+  height: 90%;
+  padding-left: 0.5rem;
+  position: relative;
+  width: 85%;
+}
+
+.form--inputTodo--addBtn {
+  align-items: center;
+  background-color: #E86B1B;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  display: flex;
+  font-size: 1rem;
+  justify-content: center;
+  margin-right: 0.5rem;
+  width: 10%;
+}
+
+.form--inputTodo--addBtn:hover {
+  cursor: pointer;
+}
+
+.inputBox--filterTodo {
+  background-color: white;
+  position: relative;
+  width: 10rem;
+  height: 100%;
+}
+
+.inputBox--filterTodo select {
+  -webkit-appearance: none;
+  background-color: white;
+  border: none;
+  color: #E86B1B;
+  font-size: 1rem;
+  height: 100%;
+  line-height: 1.5em;
+  padding: 0.5rem 0.5rem;
+  width: 100%;
+
+  background-image:
+    linear-gradient(45deg, transparent 50%, white 50%),
+    linear-gradient(135deg, white 50%, transparent 50%),
+    linear-gradient(to right, #E86B1B, #E86B1B);
+
+  background-position:
+    calc(100% - 20px) calc(1em + 2px),
+    calc(100% - 15px) calc(1em + 2px),
+    100% 0;
+
+  background-size:
+    5px 5px,
+    5px 5px,
+    2.5em 2.5em;
+
+  background-repeat: no-repeat;
+}
+
+.inputBox--filterTodo--customSelect select:hover {
+  cursor: pointer;
+}
+
+.resultsBox {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.resultsBox--list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-top: 2rem;
+  width: 30%;
+}
+
+.listTodoItem {
+  align-items: center;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  height: 2.5rem;
+  justify-content: space-between;
+  position: relative;
+}
+
+.listTodoItem--textBox {
+  padding: 0rem 1rem;
+}
+
+.listTodoItem--btnBox {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.listTodoItem--btn {
+  height: 100%;
+  border: none;
+  color: white;
+  padding: 0rem 0.8rem;
+}
+
+.listTodoItem--btn:hover {
+  cursor: pointer;
+}
+
+.btn--orange {
+  background-color: #E86B1B;
+}
+
+.btn--green {
+  background-color:#61BF33;
+}
+
+.icon-sm {
+  font-size: 1rem;
 }

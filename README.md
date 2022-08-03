@@ -2,7 +2,7 @@
 ## Front end
 ### Herramientas:
 
-Librería React JS
+Librería ReactJS
 
 
 ## Back end
