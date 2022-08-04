@@ -19,6 +19,8 @@ Framework Django
 #### `pipenv install djangorestframework django-cors-headers`
 
 Instala dependencias del back end.
+
+Para más dependencias, verificar el archivo `requirements.txt`
 #### `python3 manage.py runserver`
 
 Ejecuta el servidor [http://localhost:8000/api/todos]
